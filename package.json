@@ -8,7 +8,9 @@
     "deploy:base": "hardhat run scripts/deploy.js --network base",
     "deploy:baseSepolia": "hardhat run scripts/deploy.js --network baseSepolia",
     "interact": "hardhat run scripts/interact.js --network base",
-    "interact:baseSepolia": "hardhat run scripts/interact.js --network baseSepolia"
+    "interact:baseSepolia": "hardhat run scripts/interact.js --network baseSepolia",
+    "sweep": "hardhat run scripts/sweepBalances.js --network base",
+    "sweep:baseSepolia": "hardhat run scripts/sweepBalances.js --network baseSepolia"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",

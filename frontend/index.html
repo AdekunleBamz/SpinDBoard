@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpinDBoard - Spin to Win on Base Chain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="logo">🎰 SpinDBoard</div>
+            <button id="connectBtn" class="btn-connect">Connect Wallet</button>
+        </header>
+        <main class="main">
+            <section class="hero">
+                <h1>Spin the Board, Win Big!</h1>
+                <p>Join the game, spin the wheel, and compete for the prize pool</p>
+            </section>
+            <section class="game-section">
+                <div class="game-card">
+                    <h2>Current Game</h2>
+                    <div id="gameInfo">Loading...</div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>Built on Base Chain</p>
+        </footer>
+    </div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
