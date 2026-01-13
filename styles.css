@@ -1431,3 +1431,37 @@
     color: var(--secondary);
     text-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
 }
+
+.tx-history {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tx-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background: var(--bg-card);
+    border-radius: 12px;
+}
+
+.tx-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tx-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.tx-status-dot.success {
+    background: #10b981;
+}
+
+.tx-status-dot.pending {
+    background: var(--secondary);
+}
