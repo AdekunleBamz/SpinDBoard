@@ -134,3 +134,26 @@ async function spinWheel() {
 
 document.getElementById('joinBtn').addEventListener('click', joinGame);
 document.getElementById('spinBtn').addEventListener('click', spinWheel);
+
+async function loadPlayers() {
+    try {
+        const game = await contract.getCurrentGame();
+        const players = await contract.getGamePlayers(game.gameId);
+        
+        if (players.length === 0) {
+            document.getElementById('playersList').innerHTML = '<p>No players yet</p>';
+            return;
+        }
+        
+        const html = players.map((p, i) => `
+            <div class="player-item">
+                <span class="player-address">${p.playerAddress.slice(0, 6)}...${p.playerAddress.slice(-4)}</span>
+                <span class="player-result">${p.hasSpun ? '🎯 ' + p.spinResult : '⏳ Waiting'}</span>
+            </div>
+        `).join('');
+        
+        document.getElementById('playersList').innerHTML = '<div class="player-list">' + html + '</div>';
+    } catch (error) {
+        console.error('Error loading players:', error);
+    }
+}
