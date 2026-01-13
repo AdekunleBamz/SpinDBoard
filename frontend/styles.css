@@ -166,3 +166,13 @@ body {
     margin-top: 24px;
     justify-content: center;
 }
+
+.winner-badge {
+    background: linear-gradient(135deg, var(--secondary), #fbbf24);
+    color: var(--bg-dark);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-left: 10px;
+}
