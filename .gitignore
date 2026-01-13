@@ -20,9 +20,7 @@ artifacts
 *.log
 npm-debug.log*
 
-# Scripts - Do not push to GitHub
-scripts/
-*script*
+# Scripts
 
 # Sensitive files
 .env*
