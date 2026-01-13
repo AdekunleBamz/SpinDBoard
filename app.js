@@ -131,3 +131,6 @@ async function spinWheel() {
         document.getElementById('spinBtn').classList.remove('spinning');
     }
 }
+
+document.getElementById('joinBtn').addEventListener('click', joinGame);
+document.getElementById('spinBtn').addEventListener('click', spinWheel);
