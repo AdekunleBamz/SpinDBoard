@@ -940,3 +940,35 @@
     background: rgba(239, 68, 68, 0.1);
     border: 1px solid #ef4444;
 }
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.accordion-item {
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.accordion-item.open .accordion-content {
+    padding: 0 20px 20px;
+    max-height: 500px;
+}
