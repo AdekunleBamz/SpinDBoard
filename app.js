@@ -105,3 +105,29 @@ async function joinGame() {
         document.getElementById('joinBtn').disabled = false;
     }
 }
+
+async function spinWheel() {
+    if (!contract) {
+        alert('Please connect wallet first!');
+        return;
+    }
+    
+    try {
+        const btn = document.getElementById('spinBtn');
+        btn.disabled = true;
+        btn.textContent = 'Spinning...';
+        btn.classList.add('spinning');
+        
+        const tx = await contract.spin();
+        await tx.wait();
+        
+        btn.classList.remove('spinning');
+        btn.textContent = 'Spun!';
+        loadGameInfo();
+    } catch (error) {
+        console.error('Spin error:', error);
+        document.getElementById('spinBtn').textContent = 'Spin!';
+        document.getElementById('spinBtn').disabled = false;
+        document.getElementById('spinBtn').classList.remove('spinning');
+    }
+}
