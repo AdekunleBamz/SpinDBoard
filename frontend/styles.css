@@ -116,3 +116,12 @@ body {
 .spinning {
     animation: spin 0.5s linear infinite;
 }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
