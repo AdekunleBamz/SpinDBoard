@@ -354,4 +354,25 @@ contract SpinDBoard is Ownable, ReentrancyGuard {
         (bool success, ) = payable(owner()).call{value: balance}("");
         require(success, "Withdrawal failed");
     }
+
+    /**
+     * @dev Get contract version
+     */
+    function getVersion() external pure returns (string memory) {
+        return "1.0.0";
+    }
+
+    /**
+     * @dev Get contract owner address
+     */
+    function getOwnerAddress() external view returns (address) {
+        return owner();
+    }
+
+    /**
+     * @dev Get entry fee
+     */
+    function getEntryFee() external pure returns (uint256) {
+        return ENTRY_FEE;
+    }
 }
